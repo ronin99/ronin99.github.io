@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kamen Rider Zero one</title>
+    <link href="https://fonts.googleapis.com/css?family=Megrim&amp;display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!--<link rel="shortcut icon" href="/img/logo3.png"/>-->
+    <script src="rider.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script>-->
+    <!--    $(document).ready(function(){-->
+    <!--        $(".ika").hover(function(){-->
+    <!--            $(this).hide("slow");-->
+    <!--        },-->
+            <!--// function(){-->
+            <!--//     $(this).show("slow");-->
+            <!--);// });-->
+    <!--    });-->
+    <!--</script>-->
+    <script>
+        $(document).ready(function(){
+            $(".ika").mouseenter(function(){
+                $(this).hide("slow");
+            });
+        });
+    </script>
+</head>
+
+<body onload="load()" onunload="unload()">
+    <div class="bannerbox"><img class="ban" src="/img/Welcome (1).jpg"></div>
+    <div class = "header">
+        <div class="menu">
+            <ul>
+                <li><a href="index.html"><img class="im" src="/rider/h1.png" alt="homeicon"></a></li>
+                <li><a href="01.html"><img class="im" src="/rider/o1.png" alt="kamen rider 01 icon"></a></li>
+                <li><a href="zio.html"><img class="im" src="/rider/z1.png" alt="kamen rider zio icon"></a></li>
+                <li><a href="build.html"><img class="im" src="/rider/b1.png" alt="kamen rider build icon"></a></li>
+                <li><a href="exaid.html"><img class="im" src="/rider/e1.png" alt="kamen rider exaid icon"></a></li>
+            </ul>
+        </div>        
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>This is a website about Kamen Rider Zero One</h1>
+    <br>
+    <br>
+    <p class="ika"><img src="/rider/001.jpg" alt="Kamen Rider Zero One"></p>
+    <br>
+        <p class="tes">Kamen Rider Zero-One (仮面ライダーゼロワン Kamen Raidā Zerowan) is a Japanese tokusatsu drama in Toei Company's Kamen Rider Series. It is the first series to debut during the Reiwa period and the thirtieth overall. The series premiered on September 1, 2019,joining Kishiryu Sentai RyusoulgerIcon-crosswiki in the Super Hero Time line-up after the finale of Kamen Rider Zi-O. After Ryusoulger's conclusion, it will be joined by Mashin Sentai KirameigerIcon-crosswiki at an unknown date.<span class="haha" onmouseover="changeBg(this)" onmouseout="changeBo(this)" title="You know too much">The catchphrase for the series is "There's only one strongest company president in the world! It's me! (世界最強の社長はただひとり！オレだ！ Sekai saikyō no shachō wa tada hitori! Ore da!)</span></p>
+        <br>
+    <!--<p class="ika"><iframe width="560" height="315" src="https://www.youtube.com/embed/BchLFFZRR18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>-->
+    <h2>Jump Link to kamen rider images</h2>
+    <ul>
+        <li><a href="#01">Kamen Rider Zero one</a></li>
+        <br>
+        <li><a href="#02">Kamen Rider Vulcan</a></li>
+        <br>
+        <li><a href="#03">Kamen Rider Valkyrie</a></li>
+    </ul>
+    <h2>Enemy Rider name</h2>
+    <ol>
+        <li>Kamen Rider Horobi</li>
+        <br>
+        <li>Kamen Rider Jin</li>
+        <br>
+        <li>Kamen Rider Thouser</li>
+    </ol>
+    <h3>Kamen Rider Vulcan</h3>
+    <P id="02"><img src="/rider/02.jpg" alt="kamen rider vulcan">
+    <br>
+    <h3>Kamen Rider Valkyrie</h3>
+    <P id="03"><img src="/rider/03.jpg" alt="Kamen Rider Valkyrie resize"></P>
+    <br>
+    <h3 >kamen rider oma Zero one</h3>
+    <P id="01"><img src="/rider/zero.jpg" alt="Kamen Rider Zero"></P>
+    <br>
+    <span>
+        <button onclick="Changecolor('red')">red</button>
+        <button onclick="Changecolor('blue')">blue</button>
+        <button onclick="Changecolor('yellow')">yellow</button>
+        <!--<button onclick="Changetext()">guess</button>-->
+    </span>
+  
+    <form action="mailto:shihui_wu@my.uri.edu" method="POST" enctype="text/plain" id="hh3">
+        <fieldset>
+            <legend >Question 1</legend>
+            <p >Who is the cast for kamen rider 01?</p>
+            <ul>
+                <li><input type="radio" name="radio_1" value="1_st">Sougo Tokiwa</li>
+                <li><input type="radio" name="radio_1" value="2_ah">Aruto Hiden</li>
+                <li><input type="radio" name="radio_1" value="3_sk">Sento Kiryu</li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Question 2</legend>
+            <p>Who is not kamen rider?</p>
+            <ul>
+                <li><input type="radio" name="radio_2" value="1_dk">Daiki Kaito</li>
+                <li><input type="radio" name="radio_2" value="2_tk">Tsukasa Kadoya</li>
+                <li><input type="radio" name="radio_2" value="3_he">Heure</li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Question 3</legend>
+            <p>Select the Kamen rider that you have been visited</p>
+            <label><input type="checkbox" name="riderbox" value="01">Kamen rider 01</label>
+            <br>
+            <label><input type="checkbox" name="riderbox" value="exaid">Kamen rider Ex-aid</label>
+            <br>
+            <label><input type="checkbox" name="riderbox" value="build">Kamen rider Build</label>
+            <br>
+            <label><input type="checkbox" name="riderbox" value="zio">Kamen rider Zio</label>
+            <br>
+            <label><input type="checkbox" name="riderbox" value="faiz">Kamen rider Faiz</label>
+            <br>
+            <label><input type="checkbox" name="riderbox" value="decade">Kamen rider Decade</label>
+        </fieldset>
+        <fieldset>
+            <legend>Question 4</legend>
+            <p>Input Kamen rider Faiz henshin code. (Must be number)</p>
+            <input type="number" name="code">
+        </fieldset>
+        <input type="reset" name="reset" Value="Reset">
+        <input type="submit" name="send" Value="Send">
+    </form>
+
+    <br>
+    <br>
+    <div class="btn ">
+        <a class="facebook " href="http://www.facebook.com/sharer.php? " target="_blank ">
+            <img src="/img/facebook.png" alt="Facebook " />
+        </a>
+        <a class="twitter " href="https://twitter.com/share? " target="_blank ">
+            <img src="/img/twitter.png" alt="Twitter " />
+        </a>
+        <a class="email " href="mailto:? ">
+            <img src="/img/email.png" alt="Email " />
+        </a>
+    </div>
+
+</body>
+
+</html>

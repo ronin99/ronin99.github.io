@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Club Popcorn Sales</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 20px;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        body{
+            float:left;
+        }
+        .space{
+            height:50px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function cal() {
+            var a = document.getElementById("unpo").value;
+            var b = document.getElementById("capo").value;
+            var c = document.getElementById("ntpo").value;
+            var d = document.getElementById("topo").value;
+            var sub = (3.00 * a) + (3.50 * b) + (4.50 * c) + (5.00 * d);
+            var gtt = sub * 0.07 + sub;
+            document.getElementById("summ").value = sub;
+            document.getElementById("gt").value = gtt;
+        }
+        function hh() {
+            var ra = document.getElementsByName("radio1");
+            var len = ra.length;
+            var na = document.getElementById("summ").value;
+            var c = (parseFloat(na) * 0.07) + parseFloat(na);
+            var k = c + 2.50;
+            var r = confirm("You have selected a credit card. A $2.50 service charge will apply. Is this OK?");
+            for (i = 0; i < len; i++) {
+                if (ra[i].checked && r == true) {
+                    document.getElementById("gt").value = k;
+                } else if (r == false) {
+                    document.getElementById("gt").value = c;
+                    ra[i].checked = false;
+                }
+            }
+        }
+        /*$(document).ready(function() {
+            $('input[type=radio][name=radio1]').click(function() {
+                if (this.value == 'visa') {
+                    var k = $("#summ").val();
+                    var t = (parseFloat(k) * 0.07) + parseFloat(k);
+                    var oo = t + 2.50;
+                    alert(t);
+                    $("#gt").val(oo);
+                } else if (this.value == 'mastercard') {
+                    var k = $("#summ").val();
+                    var t = (parseFloat(k) * 0.07) + parseFloat(k);
+                    var oo = t + 2.50;
+                    $("#gt").val(oo);
+                } else if(this.value)
+            });
+        });*/
+    </script>
+</head>
+
+<body>
+
+    <form action="mailto:shihui_wu@my.uri.edu" method="POST" enctype="text/plain" id="frm">
+        <h1>Club Popcorn Sales</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Buyer's Name: </td>
+                    <td><input type="text" name="name" id="na" placeholder="Name Required" required></td>
+                </tr>
+                <tr>
+                    <td>Street Address: </td>
+                    <td><input type="text" name="streetaddress" id="stadd" style="width:300px;"></td>
+                </tr>
+                <tr>
+                    <td>City, State, Zip: </td>
+                    <td> <input type="text" name="citystatezip" id="csz" style="width:300px;"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <table>
+            <tr class = "space">
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantiy</th>
+            </tr>
+            <tr>
+                <td>Unpopped Pocorn(1 lb.)</td>
+                <td>$3.00</td>
+                <td>
+                    <div class="center"><input type="text" name="unpo" id="unpo" size="1"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Caramel Popcorn(2 lb. cansister)</td>
+                <td>$3.50</td>
+                <td>
+                    <div class="center"><input type="text" name="capo" id="capo" size="1"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Caramel Nut Popcorn(2 lb. canister)</td>
+                <td>$4.50</td>
+                <td>
+                    <div class="center"><input type="text" name="ntpo" id="ntpo" size="1"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Toffey Nut Popcorn(2 lb. canister)</td>
+                <td>$5.00</td>
+                <td>
+                    <div class="center"><input type="text" name="topo" id="topo" size="1"></div>
+                </td>
+            </tr>
+            <tr>
+                <th style="float:left">Subtotal:</th>
+                <td><input type="text" name="subtotal" id="summ" size="3" readonly></td>
+                <!-- <td><button onclick="cal();">Update Subtotal</button></td> -->
+                <td><input type="button" name="but" id="but" value="Update Subtotal" onclick="cal();"></td>
+            </tr>
+        </table>
+        <br>
+        <h3 class = "center">Payment Method</h3>
+        <br>
+        <table>
+            <tr>
+                <th>Grand Total: </th>
+                <td><input type="text" name="grandtotal" id="gt" size="7" readonly></td>
+            </tr>
+        </table>
+        <!-- <label>Grand Total: </label> -->
+
+        <br>
+        <div>
+            <input type="radio" name="radio1" id="vi" value="visa" >Visa
+            <input type="radio" name="radio1" id="mc" value="mastercard">MasterCard
+            <input type="radio" name="radio1" id="dr" value="discover" >Discover
+            <input type="radio" name="radio1" id="ae" value="americanexpress">American Express
+            <input type="radio" name="radio1" id="ck" value="check" >Check
+        </div>
+
+        <br>
+        <br>
+        <input type="submit" name="send" value="Submit Order" onclick = "hh()">
+        <input type="reset" name="reset" value="Clear Form">
+    </form>
+
+</body>
+
+</html>
